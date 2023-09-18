@@ -3,7 +3,7 @@
   --score-container-backdrop-end: #352bec;
   --score-backdrop-start: #4e25cc;
   --score-backdrop-end: #4835f1;
-  --opacity: 0.4
+  --opacity: 0.4;
 }
 
 body {
@@ -22,6 +22,9 @@ body {
   margin: 0 auto;
 }
 
+.container-item {
+  flex: 1 1 0;
+}
 .container-left {
   background-image: linear-gradient(
     var(--score-container-backdrop-start),
@@ -37,7 +40,7 @@ body {
 
 .container-left__heading {
   text-align: center;
-  opacity: var(--opacity); 
+  opacity: var(--opacity);
   font-size: 1.3em;
 }
 
@@ -61,8 +64,7 @@ body {
 }
 
 .score__sub {
-  opacity: var(--opacity) ;
-;
+  opacity: var(--opacity);
 }
 
 .container-left__grade {
@@ -77,5 +79,4 @@ body {
 
 .grade__description {
   opacity: var(--opacity);
-
 }
