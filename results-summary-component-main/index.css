@@ -1,13 +1,18 @@
 :root {
-  --score-container-backdrop-start: #6744ff;
-  --score-container-backdrop-end: #352bec;
-  --score-backdrop-start: #4e25cc;
-  --score-backdrop-end: #4835f1;
+  --score-container-backdrop-start: hsl(252, 100%, 67%);
+  --score-container-backdrop-end: hsl(241, 81%, 54%);
+  --score-backdrop-start: hsla(256, 72%, 46%, 1);
+  --score-backdrop-end: hsla(241, 72%, 46%, 0);
   --opacity: 0.4;
+}
+@font-face {
+  font-family: HankenGrotesk;
+  src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
 }
 
 body {
   font-size: 18px;
+  font-family: HankenGrotesk;
   background-color: #ffffff;
   display: flex;
   place-items: center;
@@ -59,7 +64,7 @@ body {
   align-self: center;
 }
 
-.score {
+.overall-score {
   font-size: 4em;
 }
 
@@ -87,7 +92,6 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
 }
-
 .container-right__subscore {
   display: flex;
   justify-content: space-between;
@@ -97,6 +101,12 @@ body {
 
 .container-right__subscore-score {
   align-self: flex-end;
+  opacity: 0.4;
+  color: hsl(224, 30%, 27%);
+}
+
+.score {
+  opacity: 1;
 }
 .reaction {
   --color: 0, 100%, 67%;
