@@ -4,7 +4,9 @@
   --score-backdrop-start: hsla(256, 72%, 46%, 1);
   --score-backdrop-end: hsla(241, 72%, 46%, 0);
   --opacity: 0.4;
+  --default-padding: 2.3em;
 }
+
 @font-face {
   font-family: HankenGrotesk;
   src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
@@ -27,16 +29,18 @@ body {
   margin: 0 auto;
 }
 
-.container-item {
+.container > .container-item {
   flex: 1 1 0;
+  padding-top: 1.5em;
 }
+
 .container-left {
   background-image: linear-gradient(
     var(--score-container-backdrop-start),
     var(--score-container-backdrop-end)
   );
-  border-radius: 0.8rem;
-  padding: 2em;
+  border-radius: 2rem;
+  padding: var(--default-padding);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -87,16 +91,32 @@ body {
 }
 
 .container-right {
-  padding: 1.4em;
+  padding: var(--default-padding);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
+
+.container-right__heading {
+  font-size: 1.2em;
+  font-weight: 700;
+  opacity: 0.8;
+  margin-bottom: 1em;
+}
 .container-right__subscore {
   display: flex;
   justify-content: space-between;
-  padding: 1em;
+  padding: 0.75em;
   border-radius: 0.4em;
+  line-height: 1.5;
+}
+
+.container-right__subscore-heading {
+  display: flex;
+}
+
+.container-right__subscore-heading img {
+  margin-right: 0.5em;
 }
 
 .container-right__subscore-score {
@@ -108,6 +128,18 @@ body {
 .score {
   opacity: 1;
 }
+
+.container-right__action {
+  display: flex;
+  place-content: center;
+  border-radius: 3em;
+  background-color: hsl(224, 30%, 27%);
+  padding: 1em;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  margin-top: 2.3em;
+}
+
 .reaction {
   --color: 0, 100%, 67%;
   color: hsl(var(--color));
