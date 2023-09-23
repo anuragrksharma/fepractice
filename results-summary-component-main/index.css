@@ -186,3 +186,20 @@ body {
   color: hsl(var(--color));
   background-color: hsl(var(--color), 0.1);
 }
+
+@media only screen and (width < 500px) {
+  body {
+    margin: 0;
+    align-items: flex-end;
+  }
+  .container {
+    flex-direction: column;
+    height: 100dvh;
+    width: 100dvw;
+  }
+
+  .container-left {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
