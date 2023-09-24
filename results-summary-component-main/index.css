@@ -188,18 +188,46 @@ body {
 }
 
 @media only screen and (width < 500px) {
+  :root {
+    --circle-diameter: 9em;
+  }
   body {
     margin: 0;
     align-items: flex-end;
+    font-size: 16px;
   }
   .container {
     flex-direction: column;
     height: 100dvh;
     width: 100dvw;
+    box-shadow: none;
+  }
+  .container > .container-item {
+    padding-top: inherit;
   }
 
   .container-left {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    padding: 0.5em 2em;
   }
+
+  .container-right__subscore {
+    margin: 0.6em 0;
+  }
+
+  .container-right__heading {
+    margin: 1em 0;
+  }
+
+  .container-right__action {
+    margin-top: 1em;
+  }
+  .grade__heading {
+    font-size: 1.6em;
+  }
+
+  /* .grade__description { */
+  /*   font-size: 0.8 em; */
+  /* } */
 }
