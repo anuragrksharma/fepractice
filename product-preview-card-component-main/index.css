@@ -1,3 +1,8 @@
+@font-face {
+  src: url(https://fonts.google.com/specimen/Montserrat);
+  font-family: Montserrat;
+}
+
 body {
   font-size: 14px;
   display: flex;
@@ -6,6 +11,11 @@ body {
   width: 100dvw;
   margin: 0;
   background-color: hsl(30, 38%, 92%);
+  font-family: Montserrat;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .container {
@@ -25,9 +35,11 @@ body {
   background-image: url(./images/image-product-desktop.jpg);
   background-size: contain;
   height: 100%;
+  border-radius: 1em 0 0 1em;
 }
 
-.container-right {
+.container-right__content {
+  padding: 2.5em 2.28em 2.28em 2.28em;
 }
 
 .title {
