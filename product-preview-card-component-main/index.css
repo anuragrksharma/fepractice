@@ -1,3 +1,8 @@
+:root {
+  --primary-color: hsl(158, 36%, 37%);
+  --dark-blue: hsl(212, 21%, 14%);
+}
+
 @font-face {
   src: url(https://fonts.google.com/specimen/Montserrat);
   font-family: Montserrat;
@@ -43,21 +48,53 @@ body {
 }
 
 .title {
+  opacity: 0.8;
 }
 
 .heading {
+  margin: 0.5em auto;
+  font-size: 2em;
+  font-weight: 700;
 }
 
 .description {
+  line-height: 1.5;
+  opacity: 0.7;
 }
 
 .price {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1em;
+  align-items: center;
+}
+
+.current-price {
+  color: var(--primary-color);
+  font-size: 2em;
 }
 
 .original-price {
 }
+
 .action-button {
+  display: flex;
+  place-content: center;
+  border-radius: 0.5em;
+  background-color: var(--primary-color);
+  padding: 1em;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  margin-top: 2.3em;
+  cursor: pointer;
+  border: none;
+  font-size: 1em;
 }
 
+.action-button > img {
+  height: auto;
+  width: auto;
+  margin-right: 1em;
+}
 .cta {
 }
