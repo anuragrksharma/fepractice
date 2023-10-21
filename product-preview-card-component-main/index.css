@@ -24,21 +24,23 @@ body {
 }
 
 .container {
-  height: 450px;
-  width: 600px;
-  margin: 0 auto;
-  display: flex;
+  display: grid;
   border-radius: 1em;
   background-color: white;
+  transition: 300ms;
+  grid-template-columns: 1fr 1fr;
+  max-height: 600px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .container-item {
-  flex: 1 1 0;
 }
 
 .container-left {
   background-image: url(./images/image-product-desktop.jpg);
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 100%;
   border-radius: 1em 0 0 1em;
 }
@@ -65,7 +67,7 @@ body {
 .price {
   display: flex;
   flex-direction: row;
-  margin-top: 1em;
+  margin-top: 2em;
   align-items: center;
 }
 
@@ -75,6 +77,10 @@ body {
 }
 
 .original-price {
+  text-decoration: line-through;
+  opacity: 0.7;
+  margin-left: 1em;
+  font-size: 0.9em;
 }
 
 .action-button {
@@ -96,5 +102,26 @@ body {
   width: auto;
   margin-right: 1em;
 }
-.cta {
+
+@media only screen and (width <500px) {
+  body {
+    margin: 2em auto;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 60%;
+    height: 100%;
+    margin: 2em 1em;
+  }
+
+  .container-left {
+    border-radius: 1em 1em 0 0;
+    background-position-y: center;
+  }
+
+  .container-right__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 }
