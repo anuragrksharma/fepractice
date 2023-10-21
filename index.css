@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  place-items: center;
+  font-size: 14px;
+}
+
+.container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2em;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+
+  > iframe {
+    border: none;
+    width: 600px;
+    height: 900px;
+  }
+}

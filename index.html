@@ -1,12 +1,51 @@
 <!doctype html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Outfit" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>FrontEnd Practice Projects</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
   <body>
-    <a href="/qr-code-component-main/index.html">Qr Code</a>
-    <br />
-    <a href="results-summary-component-main/index.html">Results Summary</a>
-    <br />
-    <a href="/product-preview-card-component-main/index.html"
-      >Product Preview</a
-    >
+    <div class="container">
+      <div class="item">
+        <a href="/qr-code-component-main/index.html">Qr Code</a>
+        <iframe src="qr-code-component-main/index.html"></iframe>
+      </div>
+      <div class="item">
+        <a href="results-summary-component-main/index.html">Results Summary</a>
+        <iframe src="results-summary-component-main/index.html"
+          >Results Summary</iframe
+        >
+      </div>
+      <div class="item">
+        <a href="/product-preview-card-component-main/index.html"
+          >Product Preview</a
+        >
+        <iframe src="/product-preview-card-component-main/index.html"
+          >Product Preview</iframe
+        >
+      </div>
+    </div>
   </body>
 </html>
