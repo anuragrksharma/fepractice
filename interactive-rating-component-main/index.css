@@ -25,66 +25,123 @@ body {
   margin: 0 auto;
   background-color: var(--very-dark-blue);
   background-image: linear-gradient(var(--dark-blue), #171e28);
-  border-radius: 5%;
-  width: 410px;
-  height: 420px;
-  padding: 2em;
+  border-radius: 8%;
+  width: 400px;
+  height: 400px;
+  padding: 2rem;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.positioning-element {
+  position: relative;
   height: 100%;
+  width: 100%;
+  transition: all 0.8s;
+  transform-style: preserve-3d;
+}
+.form,
+.thank-you {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 300ms ease-in-out;
+  height: 100%;
+  opacity: 1;
   .star {
     border-radius: 50%;
-    width: 3em;
+    width: 3rem;
     background-color: #262f38;
     display: flex;
     justify-content: center;
-    padding: 1em;
+    padding: 1rem;
   }
   .heading {
     color: var(--white);
+    font-size: 2em;
   }
 
   .description {
     color: var(--light-grey);
-    font-size: 0.8em;
+    line-height: 1.5;
+    font-size: 1.1em;
   }
 
   .ratings {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     .rating {
       border-radius: 50%;
       background-color: var(--dark-blue);
       color: var(--light-grey);
       display: flex;
       justify-content: center;
-      padding: 0.3em;
-      width: 2em;
+      padding: 1.2rem;
+      width: 3.3rem;
+      opacity: 0.7;
+      font-weight: 600;
+      transition: 300ms;
+      cursor: pointer;
+      font-size: 1.1em;
       /* color: var(--medium-grey); */
+      &:hover {
+        background-color: var(--primary-color);
+        color: var(--white);
+      }
+
+      &:active {
+        filter: brightness(85%);
+      }
+
+      &.selected {
+        color: var(--white);
+        background-color: var(--light-grey);
+      }
     }
   }
 
   .submit {
-    border-radius: 2em;
+    border-radius: 2rem;
     background-color: var(--primary-color);
     color: var(--white);
-
     display: flex;
     place-content: center;
-    border-radius: 3em;
-    padding: 1em;
+    padding: 1rem;
     font-weight: 700;
-    margin-top: 2.3em;
     cursor: pointer;
     border: none;
-    font-size: 1em;
+    transition: 300ms;
+
+    &:hover {
+      background-color: var(--white);
+      color: var(--primary-color);
+    }
+
+    &:active {
+      filter: brightness(130%);
+    }
   }
 }
 
 .thank-you {
-  display: none;
+  place-items: center;
+  justify-content: space-around;
+
+  .description {
+    text-align: center;
+  }
+
+  .selected-rating {
+    background-color: #262f38;
+    border-radius: 1.5rem;
+    padding: 0.5rem 1rem;
+    color: var(--primary-color);
+    opacity: 0.8;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
 }
