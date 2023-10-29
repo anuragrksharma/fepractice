@@ -1,0 +1,67 @@
+:root {
+  --bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  background-color: var(--bg);
+  display: flex;
+  place-items: center;
+  height: 100dvh;
+  width: 100dvw;
+  margin: 0;
+}
+
+.app {
+  height: 600px;
+  width: 350px;
+  margin: 0 auto;
+  color: white;
+  border-radius: 0.4rem;
+  background-color: var(--card-bg);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  margin: 0 1.5rem;
+}
+
+.image {
+  background-image: url("./images/image-equilibrium.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex-basis: 50%;
+  border-radius: 0.5rem;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 0;
+  border-top: 1px solid white;
+  font-size: 0.9em;
+  .creator-image {
+    background-image: url("./images/image-avatar.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 1px solid white;
+    width: 1.5em;
+    padding: 1em;
+    margin-right: 1em;
+  }
+
+  .creator-name {
+    margin-left: 1em;
+    opacity: 1;
+  }
+}
