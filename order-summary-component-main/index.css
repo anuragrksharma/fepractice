@@ -1,0 +1,128 @@
+:root {
+  --primary-pale-blue: hsl(225, 100%, 94%);
+  --primary-bright-blue: hsl(245, 75%, 52%);
+  --secondary-pale-blue: hsl(225, 100%, 98%);
+  --secondary-desat-blue: hsl(224, 23%, 55%);
+  --secondary-dark-blue: hsl(223, 47%, 23%);
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  width: 100svw;
+  height: 100svh;
+  box-sizing: border-box;
+  display: flex;
+  place-items: center;
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-size: cover;
+  margin: 0;
+}
+
+.btn {
+  cursor: pointer;
+  transition: all 200ms ease-in;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 43.5rem;
+  width: 28rem;
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(212, 45%, 89%);
+  border-radius: 0.8em;
+  margin: 0 auto;
+}
+
+.cover-image {
+  flex-basis: 33%;
+  background-image: url("./images/illustration-hero.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid hsl(212, 45%, 89%);
+  border-top-left-radius: 0.8em;
+  border-top-right-radius: 0.8em;
+}
+
+.details {
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  margin-top: 1em;
+  padding: 0 3em;
+  justify-content: space-evenly;
+  flex: 1 1 0;
+  .summary-heading {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+
+  .summary {
+    text-align: center;
+    color: var(--secondary-dark-blue);
+  }
+
+  .plan-info {
+    border: 1px;
+    border-radius: 0.8em;
+    display: grid;
+    grid-template-areas: "icon details btn" "icon charges btn";
+    grid-template-columns: 1fr 3fr 1fr;
+    padding: 1.5em 1em;
+    width: 100%;
+    background-color: var(--secondary-pale-blue);
+
+    .music-icon {
+      grid-area: icon;
+    }
+
+    .plan-type {
+      font-weight: 600;
+      grid-area: details;
+    }
+
+    .plan-charge {
+      grid-area: charges;
+      color: var(--secondary-dark-blue);
+      opacity: 0.8;
+    }
+
+    .plan-change-btn {
+      display: flex;
+      place-items: center;
+      grid-area: btn;
+      color: blue;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .submit-btn {
+    border: 1px;
+    border-radius: 1em;
+    background-color: var(--primary-bright-blue);
+    color: white;
+    cursor: pointer;
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(5px 20px 9px var(--primary-pale-blue));
+    &:hover {
+      background-color: #766cf1;
+    }
+  }
+
+  .cancel-btn {
+    color: var(--secondary-desat-blue);
+    font-weight: 600;
+    cursor: pointer;
+    &:hover {
+      color: var(--secondary-dark-blue);
+    }
+  }
+}
